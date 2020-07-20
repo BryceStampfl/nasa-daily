@@ -1,10 +1,10 @@
 from flask import Flask, request
 import requests
+import config
 
 app = Flask(__name__)
 
-api_key = "S5dNkQap4TsmltuK9dm3sVhs52WsOMa96NBC6Nlc"
-nasa_url = "https://api.nasa.gov/planetary/apod?api_key=" + api_key
+nasa_url = "https://api.nasa.gov/planetary/apod?api_key=" + config.API_KEY
 
 
 @app.route('/', methods=['GET'])
